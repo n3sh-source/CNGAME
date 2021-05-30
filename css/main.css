@@ -44,7 +44,7 @@ header {
 }
 
 /*Principal*/
-.grid{
+#grid-principal{
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-gap: 20px;
@@ -75,3 +75,5 @@ header {
 	grid-row: 2;
 	align-self: end;
 }
+
+/*Secundárias*/
