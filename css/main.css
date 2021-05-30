@@ -1,17 +1,41 @@
 /*Feito por: Gustavo Costa Arakaki - TP-P2-PSI - FATEC-RL*/
-
-@charset "utf-8";
-
-*{
-    margin: 0;
-    padding: 0;
+/*Feito por: Luca Pedro de Oliveira - TP-P2-PSI - FATEC-RL*/
+* {
+    margin: 0px;
+    padding: 0px;
 }
 
 /*Menu CSS*/
+.logo {
+    width: 75px;
+    height: 75px;
+}
 
+header {
+	width: 100%;
+}
 
-.logo{
-    width: 70px;
+/*#nav_header {
+	display: flex;
+	align-items: center;
+}*/
+
+.all_logo {
+	background-color: pink;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.logo_nome:nth-child(1) {
+	margin: 5px 0px 5px 0px;
+}
+
+.logo_nome:nth-child(2) {
+	margin: 5px 0px 5px 10px;
+	font-family: calibri;
+	font-weight: bold;
+	font-size: 25px;
 }
 
 /*Principal*/
