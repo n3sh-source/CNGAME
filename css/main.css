@@ -85,12 +85,57 @@ header {
 }
 
 /*Secundárias*/
-#flex-secundaria{
+#flex_secundaria {
 	display: flex;
-	justify-content: center;
-	margin: 0 auto;
+    flex-direction: column;
+    margin: auto;
+    max-width: 800px;	
 }
 
-#flex-secundaria > div {
+.box_secundaria {
+    display: flex;
+    margin-top: 10px;
+    max-width: 550px;
+    padding-bottom: 10px;
+    border-bottom: solid 1px gray;
+}
+
+.img_secundaria {
+    max-width: 250px;
+}
+
+.info_secundaria {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+}
+
+.texto_secundaria {
+    flex: 1;
+}
+
+.texto_secundaria p {
+	margin: 15px;
+}
+
+.cat_data {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.img_div_sec {
+	width: 250px;
+}
+
+.data {
 	display: flex;
+    align-items: flex-end;
+    margin: 15px;
+}
+
+.cat {
+	display: flex;
+    align-items: flex-end;
+    margin: 15px;
 }
