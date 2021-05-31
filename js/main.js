@@ -16,9 +16,6 @@ function NSPegarDados(){
 function NSraspar(documento){
     var ref = document.getElementById('flex_secundaria');
 
-    var noticia = document.createElement('div');
-    noticia.setAttribute('class', 'box_secundaria');
-
     var div_img = document.createElement('div');
     div_img.setAttribute('class', 'img_secundaria');
 
@@ -26,12 +23,15 @@ function NSraspar(documento){
     img.setAttribute('class', 'img_div_sec');
 
     //feed-post-body feed-post-link
-	documento.querySelectorAll(".feed-post-body").forEach(a => {
-		noticia.appendChild(a);  
-	});
+	documento.querySelectorAll(".feed-post-body").forEach(div => {
+        var noticia = document.createElement('div');
+        noticia.setAttribute('class', 'box_secundaria');
+        
 
-    
-    ref.appendChild(noticia);
+		noticia.appendChild(div);
+
+        ref.appendChild(noticia);
+	});
 };
 
 
