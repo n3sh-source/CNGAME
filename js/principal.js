@@ -1,9 +1,13 @@
 function raspar(documento){
-    var p = document.createElement("p");
     var h = document.createElement("div");
     documento.querySelectorAll(".hspotlight:nth-child(-n+3) article:nth-child(-n+4)").forEach(div => {
         var pega = document.getElementById("pega");
-        h.appendChild(div);
+        var h2 = document.createElement("div");
+        h2.appendChild(div)
+        h.appendChild(h2);
+
+        // h.appendChild(div);
+        
         pega.appendChild(h);
         var u = documento.querySelectorAll(".hspotlight:nth-child(-n+3) article:nth-child(-n+4)");
         var p = document.createElement("p");

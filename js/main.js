@@ -19,6 +19,7 @@ function NSraspar(documento){
     //feed-post-body feed-post-link
 	documento.querySelectorAll(".feed-post-body").forEach(div => {
 		//Esqueleto da notícia
+		ref.appendChild(div);
         var noticia = document.createElement('div');
         noticia.setAttribute('class', 'box_secundaria');
         
@@ -53,8 +54,11 @@ function NSraspar(documento){
 		var p_data = document.createElement('p');
 
 		var span = document.querySelectorAll(".feed-post-datetime");
+		for (let i = 0; i < span.length; i++) {
+			p_data.innerHTML = span[i];
+		}
 
-		p_data.innerHTML = span;
+		
 
 		data.appendChild(p_data);
 		cat.appendChild(p_cat);
