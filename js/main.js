@@ -19,7 +19,6 @@ function NSraspar(documento){
     //feed-post-body feed-post-link
 	documento.querySelectorAll(".feed-post-body").forEach(div => {
 		//Esqueleto da notícia
-		ref.appendChild(div);
         var noticia = document.createElement('div');
         noticia.setAttribute('class', 'box_secundaria');
         
