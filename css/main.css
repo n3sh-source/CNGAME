@@ -90,44 +90,6 @@ header {
     align-self: end;
 }
 
-/*Principal*/ 
-/*#grid-principal { 
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-gap: 20px;
-	margin: 0 auto;
-	max-width: 800px;
-	padding: 10px;
-}
-
-.grid-style:nth-child(1) {
-	grid-row: 1 / 3;
-	align-self: start;
-}
-
-.grid-style:nth-child(2) {
-	align-self:start;
-}
-
-.grid-style {
-	display: grid;
-}
-
-.grid-style > img {
-	grid-column: 1;
-	grid-row: 1 / 3;
-	align-self: end;
-}
-
-.grid-style p {
-	background: rgba(0, 0, 0, 0.6);
-	padding: 10px;
-	color: white;
-	grid-column: 1;
-	grid-row: 2;
-	align-self: end;
-}
-*/
 /*Secundárias*/
 #flex_secundaria {
 	display: flex;

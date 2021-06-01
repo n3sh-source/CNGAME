@@ -2,14 +2,13 @@ function raspar(documento){
     var p = document.createElement("p");
     var h = document.createElement("div");
     documento.querySelectorAll(".hspotlight:nth-child(-n+3) article:nth-child(-n+4)").forEach(div => {
-        header = document.querySelector("header");
+        var pega = document.getElementById("pega");
         h.appendChild(div);
-        // header.parentNode.insertBefore(header, h);
-        document.body.appendChild(h);
+        pega.appendChild(h);
         var u = documento.querySelectorAll(".hspotlight:nth-child(-n+3) article:nth-child(-n+4)");
         var p = document.createElement("p");
         var caption = document.querySelectorAll(".caption");
-        lista = [];
+        var lista = [];
         for(let i = 0; i < caption.length; i++) {
             var txtP = caption[i].innerHTML;
             lista [lista.length] = txtP;
