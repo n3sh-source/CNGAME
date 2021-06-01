@@ -52,6 +52,10 @@ function NSraspar(documento){
 
 		var p_data = document.createElement('p');
 
+		var span = document.querySelectorAll(".feed-post-datetime");
+
+		p_data.innerHTML = span;
+
 		data.appendChild(p_data);
 		cat.appendChild(p_cat);
 		cat_data.appendChild(cat);
@@ -63,8 +67,8 @@ function NSraspar(documento){
 
 		noticia.appendChild(div_img);
 		noticia.appendChild(div_info_secundaria);
-		
-		noticia.appendChild(div);
+
+		//noticia.appendChild(div);
 
         ref.appendChild(noticia);
 	});
