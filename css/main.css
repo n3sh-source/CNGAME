@@ -53,50 +53,42 @@ header {
 	font-weight: bold;
 }
 /*Principal*/
-#grid-principal{
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-gap: 20px;
-	margin: 0 auto;
-	max-width: 800px;
-	padding: 10px;
+
+#pega {
+	margin: 20px;
 }
 
-/*#grid-principal > article:nth-child(1){
-	grid-row: 1 / 3;
-	align-self: start;
-}*/
-	
-/*#grid-principal > article:nth-child(2){
-	align-self:start;
-}*/
-
-#grid-principal > article{
-	display: grid;
+#grid-principal {
+	display: flex;
+    margin: auto;
+    max-width: 800px;
+    justify-content: center;
 }
 
-#grid-principal > article > a > img{
-	grid-column: 1;
-	grid-row: 1 / 3;
-	align-self: end;
-	min-width: 100%;
+.grid-style {
+	height:100%;
 }
 
-#grid-principal > article > p{
-	background: rgba(0, 0, 0, 0.6);
-    padding: 10px;
-    grid-column: 1;
-    grid-row: 2;
-    align-self: end;
+.e {
+	margin: 10px;
 }
 
-#grid-principal > article a{
-	text-decoration: none;
-	color: white;
+.e1 img {
+	height: 100%;
 }
 
-#grid-principal article a:hover{
-	text-decoration: underline;
+.e2 {
+	display: flex;
+    flex-direction: column;
+}
+
+.e2 img {
+	width: 100%;
+	/*height: 200px;*/
+}
+
+.clsP p {
+	padding: 5px;
 }
 
 /*Secundárias*/

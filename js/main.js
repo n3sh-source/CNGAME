@@ -15,11 +15,9 @@ function NSPegarDados(){
 
 function NSraspar(documento){
     var ref = document.getElementById('flex_secundaria');
-
     //feed-post-body feed-post-link
 	documento.querySelectorAll(".feed-post-body").forEach(div => {
 		//Esqueleto da notícia
-		ref.appendChild(div);
         var noticia = document.createElement('div');
         noticia.setAttribute('class', 'box_secundaria');
         
@@ -52,15 +50,22 @@ function NSraspar(documento){
 		data.setAttribute('class', 'data');
 
 		var p_data = document.createElement('p');
-
-		var span = document.querySelectorAll(".feed-post-datetime");
-		for (let i = 0; i < span.length; i++) {
-			p_data.innerHTML = span[i];
-		}
-
+		// ref.appendChild(div);
 		
+		// var listaa = [];
+		// var span = document.querySelectorAll(".feed-post-datetime");
+	
+		
+		// for(let i = 0; i < span.length; i++) {
+  //           var txtP = span[i].innerHTML;
+  //           listaa [listaa.length] = txtP;
+  //           span[i].remove();
+  //       }
+  //       div.appendChild(p_data)
+		// p_data.innerHTML = listaa;
 
 		data.appendChild(p_data);
+		
 		cat.appendChild(p_cat);
 		cat_data.appendChild(cat);
 		cat_data.appendChild(data);

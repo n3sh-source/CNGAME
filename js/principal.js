@@ -1,15 +1,35 @@
 function raspar(documento){
     var h = document.createElement("div");
+    
+    var elemento = document.createElement("div");
+    elemento.className = "e1";
+    elemento.className+= " e";
+    
+    var elemento2 = document.createElement("div");
+    elemento2.className = "e2";
+    elemento2.className+= " e";
+    
+    var cont = 3;
+    
     documento.querySelectorAll(".hspotlight:nth-child(-n+3) article:nth-child(-n+4)").forEach(div => {
         var pega = document.getElementById("pega");
-        var h2 = document.createElement("div");
-        h2.appendChild(div)
-        h.appendChild(h2);
-
-        // h.appendChild(div);
+        if(cont > 2) {
+            elemento.appendChild(div);
+            h.appendChild(elemento);    
+        }
+        else {
+            elemento2.appendChild(div);
+            h.appendChild(elemento2);
+        }
+        
+        cont-=1;
         
         pega.appendChild(h);
-        var u = documento.querySelectorAll(".hspotlight:nth-child(-n+3) article:nth-child(-n+4)");
+
+        // tummb = querySelectorAll()
+        // divA = createElement("div");
+
+        
         var p = document.createElement("p");
         var caption = document.querySelectorAll(".caption");
         var lista = [];
@@ -18,7 +38,10 @@ function raspar(documento){
             lista [lista.length] = txtP;
             caption[i].remove();
         }
-        div.appendChild(p);
+        divP = document.createElement("div");
+        divP.className = "clsP";
+        divP.appendChild(p);
+        div.appendChild(divP);
         p.innerHTML = lista;
         div.className = "grid-style";
     });
