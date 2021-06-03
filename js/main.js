@@ -38,8 +38,6 @@ function NSraspar(documento){
 		var texto_secundaria = document.createElement('div');
 		texto_secundaria.setAttribute('class', 'texto_secundaria');
 
-		var p_texto_secundaria = document.createElement('p');
-
 				//Secundaria categoria e data
 		var cat_data = document.createElement('div');
 		cat_data.setAttribute('class', 'cat_data');
@@ -52,20 +50,28 @@ function NSraspar(documento){
 		var data = document.createElement('div');
 		data.setAttribute('class', 'data');
 
-		var p_data = document.createElement('p');	
-
-
+		var p_data = document.createElement('p');
 		
 
+		var span = documento.querySelectorAll(".feed-post-datetime");
+		p_data.innerHTML = span[i].innerHTML;
+
+		var span2 = documento.querySelectorAll(".feed-post-metadata-section");
+		p_cat.innerHTML = span2[i].innerHTML;
+
+		var ti = documento.querySelectorAll(".feed-post-link");
+		texto_secundaria.innerHTML = ti[i].innerHTML;
+
+		var imgs = documento.querySelectorAll(".bstn-fd-cover-picture");
+		div_img.innerHTML = imgs[i].innerHTML
+		
 
 		data.appendChild(p_data);
 		cat.appendChild(p_cat);
 		cat_data.appendChild(cat);
 		cat_data.appendChild(data);
-		texto_secundaria.appendChild(p_texto_secundaria);
 		div_info_secundaria.appendChild(texto_secundaria);
 		div_info_secundaria.appendChild(cat_data);
-		div_img.appendChild(img);
 
 		noticia.appendChild(div_img);
 		noticia.appendChild(div_info_secundaria);
@@ -78,5 +84,6 @@ function NSraspar(documento){
 
         
 };
+
 
 window.onload = NSPegarDados;
