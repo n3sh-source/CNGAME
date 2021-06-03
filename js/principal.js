@@ -45,25 +45,25 @@ function raspar(documento){
         h.appendChild(elemento2);
         pega.appendChild(h);
 
-        // var divA = document.createElement("div");
         
         var p = document.createElement("p");
         var captionA = document.querySelectorAll(".e2 a");
         var caption = document.querySelectorAll(".caption");
         var lista = [];
+        for (let c = 0; c < captionA.length; c++) {
+            var cp = captionA[c].href;
+            console.log(cp); 
+            cp = cp.substr(18);
+            captionA[c].href = "https://br.ign.com/" + cp;
+        }
         for(let i = 0; i < caption.length; i++) {
             var txtP = caption[i].innerHTML;
             lista [lista.length] = txtP;
             caption[i].remove();
 
         }
-        for (let c = 0; c < captionA.length; c++) {
-            var cp = captionA[c].href; 
-            cp = cp.substr(18);
-            captionA[c].href = "https://br.ign.com/" + cp;
-        }
+       
 
-        
         
         var divP = document.createElement("div");
         divP.className = "clsP";
