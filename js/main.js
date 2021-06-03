@@ -38,6 +38,8 @@ function NSraspar(documento){
 		var texto_secundaria = document.createElement('div');
 		texto_secundaria.setAttribute('class', 'texto_secundaria');
 
+		var p_texto_secundaria = document.createElement('p');
+
 				//Secundaria categoria e data
 		var cat_data = document.createElement('div');
 		cat_data.setAttribute('class', 'cat_data');
@@ -60,7 +62,7 @@ function NSraspar(documento){
 		p_cat.innerHTML = span2[i].innerHTML;
 
 		var ti = documento.querySelectorAll(".feed-post-link");
-		texto_secundaria.innerHTML = ti[i].innerHTML;
+		p_texto_secundaria.innerHTML = ti[i].innerHTML;
 
 		var imgs = documento.querySelectorAll(".bstn-fd-cover-picture");
 		div_img.innerHTML = imgs[i].innerHTML
@@ -70,9 +72,9 @@ function NSraspar(documento){
 		cat.appendChild(p_cat);
 		cat_data.appendChild(cat);
 		cat_data.appendChild(data);
+		texto_secundaria.appendChild(p_texto_secundaria);
 		div_info_secundaria.appendChild(texto_secundaria);
 		div_info_secundaria.appendChild(cat_data);
-
 		noticia.appendChild(div_img);
 		noticia.appendChild(div_info_secundaria);
 

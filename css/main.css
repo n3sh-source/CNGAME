@@ -152,7 +152,7 @@ header {
     justify-content: space-between;
 }
 
-.img_div_sec {
+.img_secundaria > img{
 	width: 250px;
 }
 
