@@ -18,6 +18,7 @@ function NSraspar(documento){
     //feed-post-body feed-post-link
 	documento.querySelectorAll(".feed-post-body").forEach(div => {
 		//Esqueleto da notícia
+		
         var noticia = document.createElement('div');
         noticia.setAttribute('class', 'box_secundaria');
         
@@ -80,6 +81,8 @@ function NSraspar(documento){
 		//noticia.appendChild(div);
 
         ref.appendChild(noticia);
+
+		ref.appendChild(div);
 	});
 };
 
