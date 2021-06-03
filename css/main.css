@@ -25,6 +25,7 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	padding: 5px;
 }
 
 .menu_itens:nth-child(2) {
@@ -32,20 +33,12 @@ header {
 	min-width: 75px;
 }
 
-.menu_itens ul {
-	display: flex;
-}
-
-.menu_itens ul li {
-	list-style: none;
-	margin: 0px 5px 0px 5px;
-}
-
-.menu_itens ul li a {
+.menu_itens p a {
 	color: white;
-	text-decoration: none;
-	font-family: helvetica;
+	font-family: calibri;
 	font-weight: bold;
+	font-size: 25px;
+	text-decoration: none;
 }
 /*Principal*/
 
