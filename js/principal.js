@@ -9,36 +9,63 @@ function raspar(documento){
     elemento2.className = "e2";
     elemento2.className+= " e";
     
-    var cont = 3;
-    
-    documento.querySelectorAll(".hspotlight:nth-child(-n+3) article:nth-child(-n+4)").forEach(div => {
+    var cont = 0;
+
+    documento.querySelectorAll(".vspotlight:nth-child(1) article:nth-child(1)").forEach(div => {
         var pega = document.getElementById("pega");
-        if(cont > 2) {
-            elemento.appendChild(div);
-            h.appendChild(elemento);    
-        }
-        else {
-            elemento2.appendChild(div);
-            h.appendChild(elemento2);
-        }
         
-        cont-=1;
+        elemento.appendChild(div);
+        h.appendChild(elemento);    
+        
+        
         
         pega.appendChild(h);
+        var p = document.createElement("p");
+        var caption = document.querySelectorAll(".caption");
+        
+        var listaC = [];
+        for(let i = 0; i < caption.length; i++) {
+            var txtP = caption[i].innerHTML;
+            listaC [listaC.length] = txtP;
+            caption[i].remove();
+        }
+        var divP = document.createElement("div");
+        divP.className = "clsP";
+        divP.appendChild(p);
+        div.appendChild(divP);
+        p.innerHTML = listaC;
+        div.className = "grid-style";
+    });
 
-        // tummb = querySelectorAll()
-        // divA = createElement("div");
+    h.id = "grid-principal";
 
+    documento.querySelectorAll(".hspotlight:nth-child(-n+3) article:nth-child(-n+3)").forEach(div => {
+        var pega = document.getElementById("pega");
+        elemento2.appendChild(div);
+        h.appendChild(elemento2);
+        pega.appendChild(h);
+
+        // var divA = document.createElement("div");
         
         var p = document.createElement("p");
+        var captionA = document.querySelectorAll(".e2 a");
         var caption = document.querySelectorAll(".caption");
         var lista = [];
         for(let i = 0; i < caption.length; i++) {
             var txtP = caption[i].innerHTML;
             lista [lista.length] = txtP;
             caption[i].remove();
+
         }
-        divP = document.createElement("div");
+        for (let c = 0; c < captionA.length; c++) {
+            var cp = captionA[c].href; 
+            cp = cp.substr(18);
+            captionA[c].href = "https://br.ign.com/" + cp;
+        }
+
+        
+        
+        var divP = document.createElement("div");
         divP.className = "clsP";
         divP.appendChild(p);
         div.appendChild(divP);
@@ -48,6 +75,7 @@ function raspar(documento){
 
     h.id = "grid-principal";
 };
+    
 
 function pegarDados(){
     //AJAX
